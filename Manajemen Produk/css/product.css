@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+body {
+    font-family: 'SUSE', sans-serif;
+}
+
+/* Page structure */
+.product-page {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'SUSE', sans-serif;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 2px solid #eaeaea;
+    margin-bottom: 20px;
+}
+
+.tabs a {
+    padding-bottom: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabs a.active {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+/* Actions section */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mass-action-btn, .new-product-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-product-btn {
+    background-color: #ff5722;
+}
+
+/* Search and filter section */
+.search-filter {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.search-filter input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-category-btn, .apply-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sorting options */
+.sort-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card .img img {
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: 250px; /* Set consistent height for all images */
+    object-fit: cover; /* Prevent distortion and ensure proper fitting */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.nama-produk p, .harga p, .stok p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.harga p {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+/* Icons and actions */
+.aksi {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.aksi button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.aksi img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+
+    .card .img img {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+
+    .card .img img {
+        height: 150px; /* Further adjust height for mobile */
+    }
+}
+
+.search-filter {
+    margin-bottom: 20px;
+}
+
+.search-results {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.product-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.product-item img {
+    max-width: 100px;
+    display: block;
+    margin-top: 10px;
+}

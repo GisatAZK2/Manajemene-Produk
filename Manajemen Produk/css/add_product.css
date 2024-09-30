@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Container for the product information */
+.container-produk {
+    width: 95%; /* Set 60% to leave 20% on each side */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.container-produk p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container-produk sub {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Styling the card container */
+.card-foto {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Styling each image upload box */
+.upload-box {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #e53935;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.upload-box img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    object-fit: cover;
+}
+
+/* Text for uploading an image */
+.upload-box p {
+    color: #e53935;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Hidden input file */
+.upload-box input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Remove button styling */
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown after upload */
+}
+
+/* Container for the input field */
+.nama-produk {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.nama-produk label {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 14px;
+    width: 120px; /* Adjust as necessary */
+    color: red; /* Red color for asterisk */
+}
+
+/* Input field styling */
+.nama-produk input[type="text"] {
+    width: 100%;
+    max-width: 768px; /* Adjust the width if necessary */
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Placeholder styling */
+.nama-produk input[type="text"]::placeholder {
+    color: #ccc;
+    font-size: 12px;
+}
+
+/* Styling for the character counter */
+.nama-produk input[type="text"] + span {
+    font-size: 12px;
+    color: #999;
+    margin-left: 10px;
+}
+
+/* Hover and focus states for input */
+.nama-produk input[type="text"]:focus {
+    border-color: #e53935;
+    background-color: #fff;
+}
+
+/* Container for Kategori input */
+.kategori-produk {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Label styling for Kategori */
+.kategori-produk label {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 14px;
+    width: 120px; 
+    color: red; 
+}
+
+/* Dropdown styling */
+.kategori-produk select {
+    width: 100%;
+    max-width: 796px; /* Adjust the width if necessary */
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Placeholder option styling (optional, if you want it similar to the placeholder) */
+.kategori-produk select option:first-child {
+    color: #ccc;
+}
+
+/* Hover and focus states for select */
+.kategori-produk select:focus {
+    border-color: #e53935;
+    background-color: #fff;
+}
+
+/* Container for Deskripsi Produk */
+.deskripsi-produk {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Label styling for Deskripsi Produk */
+.deskripsi-produk label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    width: 120px; /* Match width with Nama Produk */
+    margin-top: 8px; /* To align the label with the textarea */
+}
+
+/* Styling for Deskripsi Produk textarea */
+.deskripsi-produk textarea {
+    width: 100%;
+    max-width: 775px;
+    min-height: 250px; /* Set the desired height */
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    resize: vertical; /* Allows vertical resizing */
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for textarea */
+.deskripsi-produk textarea:focus {
+    border-color: #e53935;
+    background-color: #fff;
+}
+
+/* Container for Harga Produk */
+.harga-produk {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Label styling for Harga Produk */
+.harga-produk label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    width: 120px; /* Align with Nama Produk */
+}
+
+/* Styling for Harga Produk input */
+.harga-produk input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for Harga Produk */
+.harga-produk input:focus {
+    border-color: #e53935;
+    background-color: #fff;
+}
+
+
+.stok-produk {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Label styling for Stok Produk */
+.stok-produk label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    width: 120px; /* Align with Nama Produk */
+}
+
+/* Styling for Stok Produk input */
+.stok-produk input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for Stok Produk */
+.stok-produk input:focus {
+    border-color: #e53935;
+    background-color: #fff;
+}
+
+/* Button container styling */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.form-actions button:first-child {
+    margin-right: 10px; /* Atur jarak sesuai kebutuhan */
+}
+
+
+/* Button styling */
+.form-actions button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover state */
+.form-actions button:hover {
+    background-color: #d32f2f;
+}
+
+
+
+/* Media query to adjust for smaller screens */
+@media (max-width: 768px) {
+    .container-produk {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
